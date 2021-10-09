@@ -13,7 +13,8 @@ namespace Lab1_Plaksina
     public partial class FormAerobus : Form
     {
 
-        private Aerobus aer;
+        private ITransport aer;
+
         public FormAerobus()
         {
             InitializeComponent();
@@ -29,10 +30,15 @@ namespace Lab1_Plaksina
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            aer = new Aerobus();
-            aer.Init(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.BlueViolet,
-           Color.Aquamarine, true, true); aer.SetPosition(rnd.Next(80, 250),
-            rnd.Next(80, 250), pictureBoxAerobus.Width, pictureBoxAerobus.Height);
+            aer = new Airplane(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.BlueViolet);
+            aer.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxAerobus.Width, pictureBoxAerobus.Height);
+            Draw();
+        }
+        private void buttonCreateAerobus_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            aer = new Aerobus(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.BlueViolet, Color.Aquamarine, true, true);
+            aer.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxAerobus.Width, pictureBoxAerobus.Height);
             Draw();
         }
         private void buttonMove_Click(object sender, EventArgs e)
@@ -56,7 +62,6 @@ namespace Lab1_Plaksina
             }
             Draw();
         }
-
 
     }
 }

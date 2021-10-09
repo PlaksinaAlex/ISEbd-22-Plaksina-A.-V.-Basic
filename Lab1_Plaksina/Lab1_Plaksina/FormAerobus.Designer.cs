@@ -2,8 +2,15 @@
 {
 	partial class FormAerobus
 	{
+		/// <summary>
+		/// Обязательная переменная конструктора.
+		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 
+		/// <summary>
+		/// Освободить все используемые ресурсы.
+		/// </summary>
+		/// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && (components != null))
@@ -27,6 +34,7 @@
 			this.buttonUp = new System.Windows.Forms.Button();
 			this.buttonDown = new System.Windows.Forms.Button();
 			this.buttonRight = new System.Windows.Forms.Button();
+			this.buttonCreateAerobus = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxAerobus)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -44,9 +52,9 @@
 			// 
 			this.buttonCreate.Location = new System.Drawing.Point(12, 12);
 			this.buttonCreate.Name = "buttonCreate";
-			this.buttonCreate.Size = new System.Drawing.Size(87, 33);
+			this.buttonCreate.Size = new System.Drawing.Size(126, 33);
 			this.buttonCreate.TabIndex = 1;
-			this.buttonCreate.Text = "Создать";
+			this.buttonCreate.Text = "Создать самолет";
 			this.buttonCreate.UseVisualStyleBackColor = true;
 			this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
 			// 
@@ -98,11 +106,22 @@
 			this.buttonRight.UseVisualStyleBackColor = true;
 			this.buttonRight.Click += new System.EventHandler(this.buttonMove_Click);
 			// 
+			// buttonCreateAerobus
+			// 
+			this.buttonCreateAerobus.Location = new System.Drawing.Point(161, 14);
+			this.buttonCreateAerobus.Name = "buttonCreateAerobus";
+			this.buttonCreateAerobus.Size = new System.Drawing.Size(144, 30);
+			this.buttonCreateAerobus.TabIndex = 6;
+			this.buttonCreateAerobus.Text = "Создать аэробус";
+			this.buttonCreateAerobus.UseVisualStyleBackColor = true;
+			this.buttonCreateAerobus.Click += new System.EventHandler(this.buttonCreateAerobus_Click);
+			// 
 			// FormAerobus
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(884, 461);
+			this.Controls.Add(this.buttonCreateAerobus);
 			this.Controls.Add(this.buttonRight);
 			this.Controls.Add(this.buttonDown);
 			this.Controls.Add(this.buttonUp);
@@ -125,5 +144,7 @@
 		private System.Windows.Forms.Button buttonUp;
 		private System.Windows.Forms.Button buttonDown;
 		private System.Windows.Forms.Button buttonRight;
+		private System.Windows.Forms.Button buttonCreateAerobus;
 	}
 }
+

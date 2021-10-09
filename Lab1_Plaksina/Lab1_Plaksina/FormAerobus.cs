@@ -19,11 +19,17 @@ namespace Lab1_Plaksina
         {
             InitializeComponent();
         }
+
+        public void SetAir(ITransport aer)
+        {
+            this.aer = aer;
+            Draw();
+        }
         private void Draw()
         {
             Bitmap bmp = new Bitmap(pictureBoxAerobus.Width, pictureBoxAerobus.Height);
             Graphics gr = Graphics.FromImage(bmp);
-            aer.DrawTransport(gr);
+            aer?.DrawTransport(gr);
             pictureBoxAerobus.Image = bmp;
         }
 
@@ -48,16 +54,16 @@ namespace Lab1_Plaksina
             switch (name)
             {
                 case "buttonUp":
-                    aer.MoveTransport(Direction.Up);
+                    aer?.MoveTransport(Direction.Up);
                     break;
                 case "buttonDown":
-                    aer.MoveTransport(Direction.Down);
+                    aer?.MoveTransport(Direction.Down);
                     break;
                 case "buttonLeft":
-                    aer.MoveTransport(Direction.Left);
+                    aer?.MoveTransport(Direction.Left);
                     break;
                 case "buttonRight":
-                    aer.MoveTransport(Direction.Right);
+                    aer?.MoveTransport(Direction.Right);
                     break;
             }
             Draw();

@@ -41,7 +41,7 @@ namespace Lab1_Plaksina
 				}
 				else
 				{
-					MessageBox.Show("Парковка переполнена");
+					MessageBox.Show("Аэродром переполнен");
 				}
 			}
 		}
@@ -61,7 +61,7 @@ namespace Lab1_Plaksina
 					}
 					else
 					{
-						MessageBox.Show("Парковка переполнена");
+						MessageBox.Show("Аэродром переполнен");
 					}
 				}
 			}

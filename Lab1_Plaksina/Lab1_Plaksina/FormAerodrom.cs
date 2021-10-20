@@ -12,12 +12,12 @@ namespace Lab1_Plaksina
 {
 	public partial class FormAerodrom : Form
 	{
-		private readonly Aerodrom<Airplane> parking;
+		private readonly Aerodrom<Airplane> aerodrom;
 
 		public FormAerodrom()
 		{
 			InitializeComponent();
-			parking = new Aerodrom<Airplane>(pictureBoxParking.Width, pictureBoxParking.Height);
+			aerodrom = new Aerodrom<Airplane>(pictureBoxParking.Width, pictureBoxParking.Height);
 			Draw();
 		}
 
@@ -25,7 +25,7 @@ namespace Lab1_Plaksina
 		{
 			Bitmap bmp = new Bitmap(pictureBoxParking.Width, pictureBoxParking.Height);
 			Graphics gr = Graphics.FromImage(bmp);
-			parking.Draw(gr);
+			aerodrom.Draw(gr);
 			pictureBoxParking.Image = bmp;
 		}
 
@@ -35,7 +35,7 @@ namespace Lab1_Plaksina
 			if (dialog.ShowDialog() == DialogResult.OK)
 			{
 				var airplane = new Airplane(100, 1000, dialog.Color);
-				if (parking + airplane != -1)
+				if (aerodrom + airplane != -1)
 				{
 					Draw();
 				}
@@ -55,7 +55,7 @@ namespace Lab1_Plaksina
 				if (dialogDop.ShowDialog() == DialogResult.OK)
 				{
 					var airplane = new Aerobus(100, 1000, dialog.Color, dialogDop.Color, true, true);
-					if (parking + airplane != -1)
+					if (aerodrom + airplane != -1)
 					{
 						Draw();
 					}
@@ -70,7 +70,7 @@ namespace Lab1_Plaksina
 		{
 			if (maskedTextBox.Text != "")
 			{
-				var airplane = parking - Convert.ToInt32(maskedTextBox.Text);
+				var airplane = aerodrom - Convert.ToInt32(maskedTextBox.Text);
 				if (airplane != null)
 				{
 					FormAerobus form = new FormAerobus();

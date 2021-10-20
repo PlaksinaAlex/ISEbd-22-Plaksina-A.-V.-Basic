@@ -17,16 +17,16 @@ namespace Lab1_Plaksina
 		public FormAerodrom()
 		{
 			InitializeComponent();
-			aerodrom = new Aerodrom<Airplane>(pictureBoxParking.Width, pictureBoxParking.Height);
+			aerodrom = new Aerodrom<Airplane>(pictureBoxAedrom.Width, pictureBoxAedrom.Height);
 			Draw();
 		}
 
 		private void Draw()
 		{
-			Bitmap bmp = new Bitmap(pictureBoxParking.Width, pictureBoxParking.Height);
+			Bitmap bmp = new Bitmap(pictureBoxAedrom.Width, pictureBoxAedrom.Height);
 			Graphics gr = Graphics.FromImage(bmp);
 			aerodrom.Draw(gr);
-			pictureBoxParking.Image = bmp;
+			pictureBoxAedrom.Image = bmp;
 		}
 
 		private void buttonSetAirplane_Click(object sender, EventArgs e)

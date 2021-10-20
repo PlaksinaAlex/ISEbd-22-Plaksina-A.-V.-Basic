@@ -28,25 +28,25 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.pictureBoxParking = new System.Windows.Forms.PictureBox();
+			this.pictureBoxAedrom = new System.Windows.Forms.PictureBox();
 			this.buttonSetAirplane = new System.Windows.Forms.Button();
 			this.buttonSetAerobus = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.buttonTakeAirplane = new System.Windows.Forms.Button();
 			this.maskedTextBox = new System.Windows.Forms.MaskedTextBox();
 			this.label1 = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBoxParking)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxAedrom)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// pictureBoxParking
+			// pictureBoxAedrom
 			// 
-			this.pictureBoxParking.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pictureBoxParking.Location = new System.Drawing.Point(0, 0);
-			this.pictureBoxParking.Name = "pictureBoxParking";
-			this.pictureBoxParking.Size = new System.Drawing.Size(678, 450);
-			this.pictureBoxParking.TabIndex = 0;
-			this.pictureBoxParking.TabStop = false;
+			this.pictureBoxAedrom.Dock = System.Windows.Forms.DockStyle.Left;
+			this.pictureBoxAedrom.Location = new System.Drawing.Point(0, 0);
+			this.pictureBoxAedrom.Name = "pictureBoxAedrom";
+			this.pictureBoxAedrom.Size = new System.Drawing.Size(678, 450);
+			this.pictureBoxAedrom.TabIndex = 0;
+			this.pictureBoxAedrom.TabStop = false;
 			// 
 			// buttonSetAirplane
 			// 
@@ -115,10 +115,10 @@
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.buttonSetAerobus);
 			this.Controls.Add(this.buttonSetAirplane);
-			this.Controls.Add(this.pictureBoxParking);
+			this.Controls.Add(this.pictureBoxAedrom);
 			this.Name = "FormAerodrom";
 			this.Text = "Аэродром";
-			((System.ComponentModel.ISupportInitialize)(this.pictureBoxParking)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxAedrom)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);
@@ -127,7 +127,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.PictureBox pictureBoxParking;
+		private System.Windows.Forms.PictureBox pictureBoxAedrom;
 		private System.Windows.Forms.Button buttonSetAirplane;
 		private System.Windows.Forms.Button buttonSetAerobus;
 		private System.Windows.Forms.GroupBox groupBox1;

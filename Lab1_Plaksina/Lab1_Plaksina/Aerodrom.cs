@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Lab1_Plaksina
 {
-    public class Parking<T> where T : class, ITransport
+    public class Aerodrom<T> where T : class, ITransport
     {
 
         private readonly T[] _places;
@@ -21,7 +21,7 @@ namespace Lab1_Plaksina
 
         private readonly int _placeSizeHeight = 80;
 
-        public Parking(int picWidth, int picHeight)
+        public Aerodrom(int picWidth, int picHeight)
         {
             int width = picWidth / _placeSizeWidth;
             int height = picHeight / _placeSizeHeight;
@@ -30,7 +30,7 @@ namespace Lab1_Plaksina
             pictureHeight = picHeight;
         }
 
-        public static int operator +(Parking<T> p, T aer)
+        public static int operator +(Aerodrom<T> p, T aer)
         {
             int width = p.pictureWidth / p._placeSizeWidth;
 
@@ -46,7 +46,7 @@ namespace Lab1_Plaksina
             return -1;
         }
 
-        public static T operator -(Parking<T> p, int index)
+        public static T operator -(Aerodrom<T> p, int index)
         {
             if ((index < p._places.Length) && (index >= 0))
             {

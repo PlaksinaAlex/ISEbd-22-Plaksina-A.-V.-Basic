@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Lab1_Plaksina
 {
-	public partial class FormParking : Form
+	public partial class FormAerodrom : Form
 	{
-		private readonly Parking<Airplane> parking;
+		private readonly Aerodrom<Airplane> parking;
 
-		public FormParking()
+		public FormAerodrom()
 		{
 			InitializeComponent();
-			parking = new Parking<Airplane>(pictureBoxParking.Width, pictureBoxParking.Height);
+			parking = new Aerodrom<Airplane>(pictureBoxParking.Width, pictureBoxParking.Height);
 			Draw();
 		}
 

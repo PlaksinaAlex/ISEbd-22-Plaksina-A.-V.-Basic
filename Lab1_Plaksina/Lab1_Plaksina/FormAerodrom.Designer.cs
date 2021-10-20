@@ -1,6 +1,6 @@
 ﻿namespace Lab1_Plaksina
 {
-	partial class FormParking
+	partial class FormAerodrom
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -107,7 +107,7 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Место:";
 			// 
-			// FormParking
+			// FormAerodrom
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -116,8 +116,8 @@
 			this.Controls.Add(this.buttonSetAerobus);
 			this.Controls.Add(this.buttonSetAirplane);
 			this.Controls.Add(this.pictureBoxParking);
-			this.Name = "FormParking";
-			this.Text = "Парковка";
+			this.Name = "FormAerodrom";
+			this.Text = "Аэродром";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxParking)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();

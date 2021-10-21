@@ -25,7 +25,7 @@ namespace Lab1_Plaksina
             this.aer = aer;
             Draw();
         }
-        private void Draw()
+            private void Draw()
         {
             Bitmap bmp = new Bitmap(pictureBoxAerobus.Width, pictureBoxAerobus.Height);
             Graphics gr = Graphics.FromImage(bmp);

@@ -38,7 +38,7 @@ namespace Lab1_Plaksina
             {
                 g.DrawRectangle(pen, _startPosX + 37, _startPosY + 15, 90, 18);
                 g.FillRectangle(brushdop, _startPosX + 37, _startPosY + 15, 90, 18);
-            }
+            } 
         }
     }
 }

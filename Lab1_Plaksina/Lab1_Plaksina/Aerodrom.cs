@@ -10,59 +10,61 @@ namespace Lab1_Plaksina
 {
     public class Aerodrom<T> where T : class, ITransport
     {
-
-        private readonly T[] _places;
-
+        
+        private readonly List<T> _places;
+        
         private readonly int pictureWidth;
 
+        private readonly int _maxCount;
+
         private readonly int pictureHeight;
-
+     
         private readonly int _placeSizeWidth = 300;
-
+       
         private readonly int _placeSizeHeight = 80;
 
         public Aerodrom(int picWidth, int picHeight)
         {
             int width = picWidth / _placeSizeWidth;
             int height = picHeight / _placeSizeHeight;
-            _places = new T[width * height];
+            _maxCount = width * height;
             pictureWidth = picWidth;
             pictureHeight = picHeight;
+            _places = new List<T>();
+
         }
 
-        public static int operator +(Aerodrom<T> p, T aer)
+        public static bool operator +(Aerodrom<T> p, T aer)
         {
-            int width = p.pictureWidth / p._placeSizeWidth;
-
-            for (int i = 0; i < p._places.Length; i++)
+            if(p._places.Count >= p._maxCount)
             {
-                if (p._places[i] == null)
-                {
-                    p._places[i] = aer;
-                    aer.SetPosition(i % width * p._placeSizeWidth + 5, i / width * p._placeSizeHeight + 5, p.pictureWidth, p.pictureHeight);
-                    return i;
-                }
+                return false;
             }
-            return -1;
+            p._places.Add(aer);
+            return true;
         }
 
         public static T operator -(Aerodrom<T> p, int index)
         {
-            if ((index < p._places.Length) && (index >= 0))
+            if (index < -1 || index >= p._places.Count)
             {
-                T aer = p._places[index];
-                p._places[index] = null;
-                return aer;
+                return null;
             }
-            return null;
+            T aer = p._places[index];
+            p._places.RemoveAt(index);
+            return aer;
         }
 
         public void Draw(Graphics g)
         {
+            int width = pictureWidth / _placeSizeWidth;
             DrawMarking(g);
-            for (int i = 0; i < _places.Length; i++)
+            for (int i = 0; i < _places.Count; i++)
             {
-                _places[i]?.DrawTransport(g);
+                _places[i].SetPosition(i % width * _placeSizeWidth + 10,
+                i / width * _placeSizeHeight + 10, pictureWidth,
+                pictureHeight);
+                _places[i].DrawTransport(g);
             }
         }
 
@@ -70,8 +72,7 @@ namespace Lab1_Plaksina
         {
             Pen pen = new Pen(Color.Black, 3);
             for (int i = 0; i < pictureWidth / _placeSizeWidth; i++)
-            {
-
+            { 
                 for (int j = 0; j < pictureHeight / _placeSizeHeight + 1; ++j)
                 {
                     g.DrawLine(pen, i * _placeSizeWidth, j * _placeSizeHeight, i *
@@ -80,7 +81,8 @@ namespace Lab1_Plaksina
                 g.DrawLine(pen, i * _placeSizeWidth, 0, i * _placeSizeWidth,
                (pictureHeight / _placeSizeHeight) * _placeSizeHeight);
             }
+   
         }
     }
 }
-
+   

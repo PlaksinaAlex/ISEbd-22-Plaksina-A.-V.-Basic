@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Lab1_Plaksina
 {
-	public class Airplane :Vehicle
+	public class Airplane : Vehicle
 	{
 
 		protected readonly int carWidth = 155;

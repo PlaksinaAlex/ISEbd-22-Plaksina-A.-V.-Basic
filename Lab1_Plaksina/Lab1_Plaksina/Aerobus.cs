@@ -40,6 +40,10 @@ namespace Lab1_Plaksina
                 g.FillRectangle(brushdop, _startPosX + 37, _startPosY + 15, 90, 18);
             }
         }
+        public void SetDopColor(Color color)
+        {
+            DopColor = color;
+        }
     }
 }
 

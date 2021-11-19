@@ -41,15 +41,15 @@ namespace Lab1_Plaksina
 			this.label_aerobus = new System.Windows.Forms.Label();
 			this.label_airplane = new System.Windows.Forms.Label();
 			this.panelAirplane = new System.Windows.Forms.Panel();
-			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.panelPeach = new System.Windows.Forms.Panel();
+			this.groupBoxColor = new System.Windows.Forms.GroupBox();
+			this.panelBlack = new System.Windows.Forms.Panel();
 			this.panelRed = new System.Windows.Forms.Panel();
-			this.panelGreen = new System.Windows.Forms.Panel();
+			this.panelLime = new System.Windows.Forms.Panel();
 			this.panelPurple = new System.Windows.Forms.Panel();
 			this.panelSilver = new System.Windows.Forms.Panel();
 			this.panelYellow = new System.Windows.Forms.Panel();
-			this.panelBlue = new System.Windows.Forms.Panel();
-			this.panelPink = new System.Windows.Forms.Panel();
+			this.panelTeal = new System.Windows.Forms.Panel();
+			this.panelFuchsia = new System.Windows.Forms.Panel();
 			this.labelDopColor = new System.Windows.Forms.Label();
 			this.labelBaseColor = new System.Windows.Forms.Label();
 			this.buttonAdd = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@ namespace Lab1_Plaksina
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxAirConfig)).BeginInit();
 			this.groupBox2.SuspendLayout();
 			this.panelAirplane.SuspendLayout();
-			this.groupBox3.SuspendLayout();
+			this.groupBoxColor.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupBox1
@@ -102,45 +102,45 @@ namespace Lab1_Plaksina
 			// 
 			this.numericUpDownWeight.Location = new System.Drawing.Point(105, 71);
 			this.numericUpDownWeight.Maximum = new decimal(new int[] {
-			1000,
-			0,
-			0,
-			0});
+            1000,
+            0,
+            0,
+            0});
 			this.numericUpDownWeight.Minimum = new decimal(new int[] {
-			100,
-			0,
-			0,
-			0});
+            100,
+            0,
+            0,
+            0});
 			this.numericUpDownWeight.Name = "numericUpDownWeight";
 			this.numericUpDownWeight.Size = new System.Drawing.Size(53, 20);
 			this.numericUpDownWeight.TabIndex = 3;
 			this.numericUpDownWeight.Value = new decimal(new int[] {
-			100,
-			0,
-			0,
-			0});
+            100,
+            0,
+            0,
+            0});
 			// 
 			// numericUpDownMaxSpeed
 			// 
 			this.numericUpDownMaxSpeed.Location = new System.Drawing.Point(105, 25);
 			this.numericUpDownMaxSpeed.Maximum = new decimal(new int[] {
-			1000,
-			0,
-			0,
-			0});
+            1000,
+            0,
+            0,
+            0});
 			this.numericUpDownMaxSpeed.Minimum = new decimal(new int[] {
-			100,
-			0,
-			0,
-			0});
+            100,
+            0,
+            0,
+            0});
 			this.numericUpDownMaxSpeed.Name = "numericUpDownMaxSpeed";
 			this.numericUpDownMaxSpeed.Size = new System.Drawing.Size(54, 20);
 			this.numericUpDownMaxSpeed.TabIndex = 2;
 			this.numericUpDownMaxSpeed.Value = new decimal(new int[] {
-			100,
-			0,
-			0,
-			0});
+            100,
+            0,
+            0,
+            0});
 			// 
 			// label2
 			// 
@@ -212,51 +212,51 @@ namespace Lab1_Plaksina
 			this.panelAirplane.DragDrop += new System.Windows.Forms.DragEventHandler(this.panelAirplane_DragDrop);
 			this.panelAirplane.DragEnter += new System.Windows.Forms.DragEventHandler(this.panelAirplane_DragEnter);
 			// 
-			// groupBox3
+			// groupBoxColor
 			// 
-			this.groupBox3.Controls.Add(this.panelPeach);
-			this.groupBox3.Controls.Add(this.panelRed);
-			this.groupBox3.Controls.Add(this.panelGreen);
-			this.groupBox3.Controls.Add(this.panelPurple);
-			this.groupBox3.Controls.Add(this.panelSilver);
-			this.groupBox3.Controls.Add(this.panelYellow);
-			this.groupBox3.Controls.Add(this.panelBlue);
-			this.groupBox3.Controls.Add(this.panelPink);
-			this.groupBox3.Controls.Add(this.labelDopColor);
-			this.groupBox3.Controls.Add(this.labelBaseColor);
-			this.groupBox3.Location = new System.Drawing.Point(491, 32);
-			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(278, 194);
-			this.groupBox3.TabIndex = 4;
-			this.groupBox3.TabStop = false;
-			this.groupBox3.Text = "Цвета";
+			this.groupBoxColor.Controls.Add(this.panelBlack);
+			this.groupBoxColor.Controls.Add(this.panelRed);
+			this.groupBoxColor.Controls.Add(this.panelLime);
+			this.groupBoxColor.Controls.Add(this.panelPurple);
+			this.groupBoxColor.Controls.Add(this.panelSilver);
+			this.groupBoxColor.Controls.Add(this.panelYellow);
+			this.groupBoxColor.Controls.Add(this.panelTeal);
+			this.groupBoxColor.Controls.Add(this.panelFuchsia);
+			this.groupBoxColor.Controls.Add(this.labelDopColor);
+			this.groupBoxColor.Controls.Add(this.labelBaseColor);
+			this.groupBoxColor.Location = new System.Drawing.Point(491, 32);
+			this.groupBoxColor.Name = "groupBoxColor";
+			this.groupBoxColor.Size = new System.Drawing.Size(278, 194);
+			this.groupBoxColor.TabIndex = 4;
+			this.groupBoxColor.TabStop = false;
+			this.groupBoxColor.Text = "Цвета";
 			// 
-			// panelPeach
+			// panelBlack
 			// 
-			this.panelPeach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-			this.panelPeach.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panelPeach.Location = new System.Drawing.Point(208, 135);
-			this.panelPeach.Name = "panelPeach";
-			this.panelPeach.Size = new System.Drawing.Size(40, 40);
-			this.panelPeach.TabIndex = 9;
+			this.panelBlack.BackColor = System.Drawing.Color.Black;
+			this.panelBlack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panelBlack.Location = new System.Drawing.Point(208, 135);
+			this.panelBlack.Name = "panelBlack";
+			this.panelBlack.Size = new System.Drawing.Size(40, 40);
+			this.panelBlack.TabIndex = 9;
 			// 
 			// panelRed
 			// 
-			this.panelRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.panelRed.BackColor = System.Drawing.Color.Red;
 			this.panelRed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.panelRed.Location = new System.Drawing.Point(26, 135);
 			this.panelRed.Name = "panelRed";
 			this.panelRed.Size = new System.Drawing.Size(40, 40);
 			this.panelRed.TabIndex = 8;
 			// 
-			// panelGreen
+			// panelLime
 			// 
-			this.panelGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			this.panelGreen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panelGreen.Location = new System.Drawing.Point(82, 135);
-			this.panelGreen.Name = "panelGreen";
-			this.panelGreen.Size = new System.Drawing.Size(40, 40);
-			this.panelGreen.TabIndex = 7;
+			this.panelLime.BackColor = System.Drawing.Color.Lime;
+			this.panelLime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panelLime.Location = new System.Drawing.Point(82, 135);
+			this.panelLime.Name = "panelLime";
+			this.panelLime.Size = new System.Drawing.Size(40, 40);
+			this.panelLime.TabIndex = 7;
 			// 
 			// panelPurple
 			// 
@@ -278,30 +278,30 @@ namespace Lab1_Plaksina
 			// 
 			// panelYellow
 			// 
-			this.panelYellow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.panelYellow.BackColor = System.Drawing.Color.Yellow;
 			this.panelYellow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.panelYellow.Location = new System.Drawing.Point(142, 69);
 			this.panelYellow.Name = "panelYellow";
 			this.panelYellow.Size = new System.Drawing.Size(40, 40);
 			this.panelYellow.TabIndex = 4;
 			// 
-			// panelBlue
+			// panelTeal
 			// 
-			this.panelBlue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.panelBlue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panelBlue.Location = new System.Drawing.Point(82, 69);
-			this.panelBlue.Name = "panelBlue";
-			this.panelBlue.Size = new System.Drawing.Size(40, 40);
-			this.panelBlue.TabIndex = 3;
+			this.panelTeal.BackColor = System.Drawing.Color.Teal;
+			this.panelTeal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panelTeal.Location = new System.Drawing.Point(82, 69);
+			this.panelTeal.Name = "panelTeal";
+			this.panelTeal.Size = new System.Drawing.Size(40, 40);
+			this.panelTeal.TabIndex = 3;
 			// 
-			// panelPink
+			// panelFuchsia
 			// 
-			this.panelPink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.panelPink.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panelPink.Location = new System.Drawing.Point(26, 69);
-			this.panelPink.Name = "panelPink";
-			this.panelPink.Size = new System.Drawing.Size(40, 40);
-			this.panelPink.TabIndex = 2;
+			this.panelFuchsia.BackColor = System.Drawing.Color.Fuchsia;
+			this.panelFuchsia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panelFuchsia.Location = new System.Drawing.Point(26, 69);
+			this.panelFuchsia.Name = "panelFuchsia";
+			this.panelFuchsia.Size = new System.Drawing.Size(40, 40);
+			this.panelFuchsia.TabIndex = 2;
 			// 
 			// labelDopColor
 			// 
@@ -355,7 +355,7 @@ namespace Lab1_Plaksina
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.buttonCancel);
 			this.Controls.Add(this.buttonAdd);
-			this.Controls.Add(this.groupBox3);
+			this.Controls.Add(this.groupBoxColor);
 			this.Controls.Add(this.panelAirplane);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox1);
@@ -368,7 +368,7 @@ namespace Lab1_Plaksina
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxAirConfig)).EndInit();
 			this.groupBox2.ResumeLayout(false);
 			this.panelAirplane.ResumeLayout(false);
-			this.groupBox3.ResumeLayout(false);
+			this.groupBoxColor.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -387,15 +387,15 @@ namespace Lab1_Plaksina
 		private System.Windows.Forms.Label label_aerobus;
 		private System.Windows.Forms.Label label_airplane;
 		private System.Windows.Forms.Panel panelAirplane;
-		private System.Windows.Forms.GroupBox groupBox3;
-		private System.Windows.Forms.Panel panelPeach;
+		private System.Windows.Forms.GroupBox groupBoxColor;
+		private System.Windows.Forms.Panel panelBlack;
 		private System.Windows.Forms.Panel panelRed;
-		private System.Windows.Forms.Panel panelGreen;
+		private System.Windows.Forms.Panel panelLime;
 		private System.Windows.Forms.Panel panelPurple;
 		private System.Windows.Forms.Panel panelSilver;
 		private System.Windows.Forms.Panel panelYellow;
-		private System.Windows.Forms.Panel panelBlue;
-		private System.Windows.Forms.Panel panelPink;
+		private System.Windows.Forms.Panel panelTeal;
+		private System.Windows.Forms.Panel panelFuchsia;
 		private System.Windows.Forms.Label labelDopColor;
 		private System.Windows.Forms.Label labelBaseColor;
 		private System.Windows.Forms.Button buttonAdd;

@@ -19,13 +19,13 @@ namespace Lab1_Plaksina
 		public FormAerobusConfig()
 		{
 			InitializeComponent();
-			this.panelPink.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+			this.panelFuchsia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
 			this.panelYellow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
 			this.panelPurple.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
 			this.panelSilver.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
-			this.panelGreen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
-			this.panelPeach.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
-			this.panelBlue.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+			this.panelLime.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+			this.panelBlack.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+			this.panelTeal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
 			this.panelRed.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
 			buttonCancel.Click += (object sender, EventArgs e) => { Close(); };
 		}

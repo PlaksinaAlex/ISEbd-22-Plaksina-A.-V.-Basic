@@ -22,6 +22,19 @@ namespace Lab1_Plaksina
             Window = window;
             Floor = floor;
         }
+        public Aerobus(string info) : base(info)
+        {
+            string[] strs = info.Split(separator);
+            if (strs.Length == 6)
+            {
+                MaxSpeed = Convert.ToInt32(strs[0]);
+                Weight = Convert.ToInt32(strs[1]);
+                MainColor = Color.FromName(strs[2]);
+                DopColor = Color.FromName(strs[3]);
+                Window = Convert.ToBoolean(strs[4]);
+                Floor = Convert.ToBoolean(strs[5]);
+            }
+        }
         public override void DrawTransport(Graphics g)
         {
             base.DrawTransport(g);
@@ -43,6 +56,11 @@ namespace Lab1_Plaksina
         public void SetDopColor(Color color)
         {
             DopColor = color;
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}{separator}{DopColor.Name}{separator}{Window}{separator}{Floor}";
         }
     }
 }

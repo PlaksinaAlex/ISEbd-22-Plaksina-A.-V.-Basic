@@ -55,7 +55,7 @@ namespace Lab1_Plaksina
 				}
 			}
 		}
-		public bool SaveData(string filename)
+		public void SaveData(string filename)
 		{
 			if (File.Exists(filename))
 			{
@@ -85,13 +85,12 @@ namespace Lab1_Plaksina
 					}
 				}
 			}
-			return true;
 		}
-		public bool LoadData(string filename)
+		public void LoadData(string filename)
 		{
 			if (!File.Exists(filename))
 			{
-				return false;
+				throw new FileNotFoundException();
 			}
 			using (StreamReader sr = new StreamReader(filename))
 			{
@@ -101,39 +100,42 @@ namespace Lab1_Plaksina
 				if (line.Contains("AerodromCollection"))
 				{
 					aerodromStages.Clear();
-					line = sr.ReadLine();
-					while (line != null)
-					{
-						if (line.Contains("Aerodrom"))
-						{
-							key = line.Split(separator)[1];
-							aerodromStages.Add(key, new Aerodrom<Vehicle>(pictureWidth, pictureHeight));
-							line = sr.ReadLine();
-							continue;
-						}
-						if (string.IsNullOrEmpty(line))
-						{
-							line = sr.ReadLine();
-							continue;
-						}
-						if (line.Split(separator)[0] == "Airplane")
-						{
-							aer = new Airplane(line.Split(separator)[1]);
-						}
-						else if (line.Split(separator)[0] == "Aerobus")
-						{
-							aer = new Aerobus(line.Split(separator)[1]);
-						}
-						var result = aerodromStages[key] + aer;
-						if (!result)
-						{
-							return false;
-						}
-						line = sr.ReadLine();
-					}
-					return true;
 				}
-				return false;
+				else
+				{
+					throw new FileLoadException("Неверный формат файла");
+
+				}
+				line = sr.ReadLine();
+				while (line != null)
+				{
+					if (line.Contains("AerodromStation"))
+					{
+						key = line.Split(separator)[1];
+						aerodromStages.Add(key, new Aerodrom<Vehicle>(pictureWidth, pictureHeight));
+						line = sr.ReadLine();
+						continue;
+					}
+					if (string.IsNullOrEmpty(line))
+					{
+						line = sr.ReadLine();
+						continue;
+					}
+					if (line.Split(separator)[0] == "Airplane")
+					{
+						aer = new Airplane(line.Split(separator)[1]);
+					}
+					else if (line.Split(separator)[0] == "Aerobus")
+					{
+						aer = new Aerobus(line.Split(separator)[1]);
+					}
+					var result = aerodromStages[key] + aer;
+					if (!result)
+					{
+						throw new FileLoadException("Не удалось загрузить автомобиль на парковку");
+					}
+					line = sr.ReadLine();
+				}
 			}
 		}
 	}

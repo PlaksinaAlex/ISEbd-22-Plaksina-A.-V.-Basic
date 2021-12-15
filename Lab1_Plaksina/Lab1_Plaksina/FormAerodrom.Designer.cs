@@ -45,16 +45,18 @@
 			this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
 			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+			this.buttonSort = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxAerodrom)).BeginInit();
 			this.groupBox1.SuspendLayout();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pictureBoxAerodrom
 			// 
 			this.pictureBoxAerodrom.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pictureBoxAerodrom.Location = new System.Drawing.Point(0, 0);
+			this.pictureBoxAerodrom.Location = new System.Drawing.Point(0, 24);
 			this.pictureBoxAerodrom.Name = "pictureBoxAerodrom";
-			this.pictureBoxAerodrom.Size = new System.Drawing.Size(670, 450);
+			this.pictureBoxAerodrom.Size = new System.Drawing.Size(670, 426);
 			this.pictureBoxAerodrom.TabIndex = 0;
 			this.pictureBoxAerodrom.TabStop = false;
 			// 
@@ -150,11 +152,11 @@
 			this.buttonAddAir.Text = "Добавить самолет";
 			this.buttonAddAir.UseVisualStyleBackColor = true;
 			this.buttonAddAir.Click += new System.EventHandler(this.buttonAddAir_Click);
-			//
+			// 
 			// menuStrip1
 			// 
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.файлToolStripMenuItem});
+            this.файлToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -164,8 +166,8 @@
 			// файлToolStripMenuItem
 			// 
 			this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.сохранитьToolStripMenuItem,
-			this.загрузитьToolStripMenuItem});
+            this.сохранитьToolStripMenuItem,
+            this.загрузитьToolStripMenuItem});
 			this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
 			this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
 			this.файлToolStripMenuItem.Text = "Файл";
@@ -193,11 +195,22 @@
 			this.openFileDialog.FileName = "openFileDialog";
 			this.openFileDialog.Filter = "txt file | *.txt";
 			// 
+			// buttonSort
+			// 
+			this.buttonSort.Location = new System.Drawing.Point(693, 203);
+			this.buttonSort.Name = "buttonSort";
+			this.buttonSort.Size = new System.Drawing.Size(83, 37);
+			this.buttonSort.TabIndex = 11;
+			this.buttonSort.Text = "Сортировать";
+			this.buttonSort.UseVisualStyleBackColor = true;
+			this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
+			// 
 			// FormAerodrom
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.buttonSort);
 			this.Controls.Add(this.buttonAddAir);
 			this.Controls.Add(this.buttonDelAerodrom);
 			this.Controls.Add(this.buttonAddAerodrom);
@@ -239,5 +252,6 @@
 		private System.Windows.Forms.ToolStripMenuItem загрузитьToolStripMenuItem;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
+		private System.Windows.Forms.Button buttonSort;
 	}
 }

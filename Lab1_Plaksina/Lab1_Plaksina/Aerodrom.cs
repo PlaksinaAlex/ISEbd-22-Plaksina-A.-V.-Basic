@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-
+using System.Collections;
 
 namespace Lab1_Plaksina
 {
-    public class Aerodrom<T> where T : class, ITransport
+    public class Aerodrom<T> : IEnumerator<T>, IEnumerable<T>
+        where T : class, ITransport
     {
 
         private readonly List<T> _places;
@@ -23,6 +24,10 @@ namespace Lab1_Plaksina
 
         private readonly int _placeSizeHeight = 80;
 
+        private int _currentIndex;
+        public T Current => _places[_currentIndex];
+        object IEnumerator.Current => _places[_currentIndex];
+
         public Aerodrom(int picWidth, int picHeight)
         {
             int width = picWidth / _placeSizeWidth;
@@ -31,7 +36,7 @@ namespace Lab1_Plaksina
             pictureWidth = picWidth;
             pictureHeight = picHeight;
             _places = new List<T>();
-
+            _currentIndex = -1;
         }
 
         public static bool operator +(Aerodrom<T> p, T aer)
@@ -40,7 +45,10 @@ namespace Lab1_Plaksina
             {
                 throw new AerodromOverflowException();
             }
-
+            if (p._places.Contains(aer))
+            {
+                throw new AerodromAlreadyHaveException();
+            }
             p._places.Add(aer);
 
             return true;
@@ -95,6 +103,31 @@ namespace Lab1_Plaksina
                 return null;
             }
             return _places[index];
+        }
+        public void Sort() => _places.Sort((IComparer<T>)new AirplaneComparer());
+        public void Dispose()
+        {
+        }
+        public bool MoveNext()
+        {
+            if (_currentIndex + 1 >= _places.Count)
+            {
+                return false;
+            }
+            _currentIndex++;
+            return true;
+        }
+        public void Reset()
+        {
+            _currentIndex = -1;
+        }
+        public IEnumerator<T> GetEnumerator()
+        {
+            return this;
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return this;
         }
     }
 }

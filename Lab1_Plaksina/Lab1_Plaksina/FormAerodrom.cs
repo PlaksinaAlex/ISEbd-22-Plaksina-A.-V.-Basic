@@ -150,6 +150,10 @@ MessageBoxIcon.Question) == DialogResult.Yes)
 					MessageBox.Show(ex.Message, "Переполнение", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					logger.Warn("Аэродром переполнен");
 				}
+				catch (AerodromAlreadyHaveException ex)
+				{
+					MessageBox.Show(ex.Message, "Дублирование", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
 				catch (Exception ex)
 				{
 					MessageBox.Show(ex.Message, "Неизвестная ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -192,6 +196,16 @@ MessageBoxIcon.Question) == DialogResult.Yes)
 				{
 					MessageBox.Show(ex.Message, "Неизвестная ошибка при сохранении", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
+			}
+		}
+
+		private void buttonSort_Click(object sender, EventArgs e)
+		{
+			if (listBoxAerodrom.SelectedIndex > -1)
+			{
+				aerodromCollection[listBoxAerodrom.SelectedItem.ToString()].Sort();
+				Draw();
+				logger.Info("Сортировка уровней");
 			}
 		}
 	}

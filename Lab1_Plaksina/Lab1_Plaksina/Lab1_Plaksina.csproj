@@ -55,11 +55,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aerobus.cs" />
+    <Compile Include="AerodromAlreadyHaveException.cs" />
     <Compile Include="AerodromCollection.cs" />
     <Compile Include="AerodromNotFoundException.cs" />
     <Compile Include="AerodromOccupiedPlaceException.cs" />
     <Compile Include="AerodromOverflowException.cs" />
     <Compile Include="Airplane.cs" />
+    <Compile Include="AirplaneComparer.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="FormAerobus.cs">
       <SubType>Form</SubType>

@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Lab1_Plaksina
 {
-	public class Airplane : Vehicle
+	public class Airplane : Vehicle, IEquatable<Airplane>
 	{
 
 		protected readonly int carWidth = 155;
@@ -108,6 +108,47 @@ namespace Lab1_Plaksina
 		public override string ToString()
 		{
 			return $"{MaxSpeed}{separator}{Weight}{separator}{MainColor.Name}";
+		}
+		public bool Equals(Airplane other)
+		{
+			if (other == null)
+			{
+				return false;
+			}
+			if (GetType().Name != other.GetType().Name)
+			{
+				return false;
+			}
+			if (MaxSpeed != other.MaxSpeed)
+			{
+				return false;
+			}
+			if (Weight != other.Weight)
+			{
+				return false;
+			}
+			if (MainColor != other.MainColor)
+			{
+				return false;
+			}
+			return true;
+		}
+		public override bool Equals(Object obj)
+		{
+			if (obj == null)
+			{
+				return false;
+			}
+
+			if (!(obj is Airplane airObj))
+			{
+				return false;
+
+			}
+			else
+			{
+				return Equals(airObj);
+			}
 		}
 	}
 

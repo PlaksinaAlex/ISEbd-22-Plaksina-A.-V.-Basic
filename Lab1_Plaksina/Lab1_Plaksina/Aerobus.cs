@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Lab1_Plaksina
 {
-    public class Aerobus : Airplane
+    public class Aerobus : Airplane, IEquatable<Aerobus>
     {
         public Color DopColor { private set; get; }
         public bool Window { private set; get; }
@@ -61,6 +61,58 @@ namespace Lab1_Plaksina
         public override string ToString()
         {
             return $"{base.ToString()}{separator}{DopColor.Name}{separator}{Window}{separator}{Floor}";
+        }
+        public bool Equals(Aerobus other)
+        {
+            if (other == null)
+            {
+                return false;
+            }
+            if (GetType().Name != other.GetType().Name)
+            {
+                return false;
+            }
+            if (MaxSpeed != other.MaxSpeed)
+            {
+                return false;
+            }
+            if (Weight != other.Weight)
+            {
+                return false;
+            }
+            if (MainColor != other.MainColor)
+            {
+                return false;
+            }
+            if (DopColor != other.DopColor)
+            {
+                return false;
+            }
+            if (Window != other.Window)
+            {
+                return false;
+            }
+            if (Floor != other.Floor)
+            {
+                return false;
+            }
+            return true;
+        }
+        public override bool Equals(Object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            if (!(obj is Aerobus airObj))
+            {
+                return false;
+            }
+            else
+            {
+                return Equals(airObj);
+            }
         }
     }
 }

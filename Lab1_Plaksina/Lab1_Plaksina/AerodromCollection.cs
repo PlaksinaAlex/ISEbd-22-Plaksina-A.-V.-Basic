@@ -67,21 +67,17 @@ namespace Lab1_Plaksina
 				foreach (var level in aerodromStages)
 				{
 					sw.WriteLine($"Aerodrom{separator}{level.Key}");
-					ITransport aer = null;
-					for (int i = 0; (aer = level.Value.GetNext(i)) != null; i++)
+					foreach (ITransport aer in level.Value)
 					{
-						if (aer != null)
+						if (aer.GetType().Name == "Airplane")
 						{
-							if (aer.GetType().Name == "Airplane")
-							{
-								sw.Write($"Airplane{separator}");
-							}
-							if (aer.GetType().Name == "Aerobus")
-							{
-								sw.Write($"Aerobus{separator}");
-							}
-							sw.WriteLine(aer);
+							sw.Write($"Airplane{separator}");
 						}
+						if (aer.GetType().Name == "Aerobus")
+						{
+							sw.Write($"Aerobus{separator}");
+						}
+						sw.WriteLine(aer);
 					}
 				}
 			}
